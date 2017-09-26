@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">뭐먹지</string>
+    <string name="app_name">What to eat?</string>
+    <string name="main_menu">메인메뉴</string>
 </resources>
