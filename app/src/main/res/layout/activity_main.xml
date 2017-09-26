@@ -1,94 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.ac.sunmoon.whattoeat.MainActivity">
+    android:orientation="vertical"
+    tools:context="com.example.taek.myapplication.MainActivity">
 
-    <ImageView
-        android:id="@+id/image_main_pic"
+
+    <!--today good menu-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:cropToPadding="false"
-        android:scaleType="fitStart"
-        app:srcCompat="@drawable/sm_1" />
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <ScrollView
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/image_main_pic">
+            android:layout_height="0px"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="오늘의 추천 메뉴"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Middle_text_size"
+            android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:orientation="vertical">
+        <!--Padding Line-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#F3F3F3"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:layout_marginBottom="5dp"
-                android:text="식당을 선택해주세요"
-                android:textAlignment="center"
-                android:textSize="15dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.01"
+            android:background="@color/black" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FAFAFA"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="기숙사 식당" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.05"
+            android:padding="10px" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FAFAFA"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="교직원 식당" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FAFAFA"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="학생회관 식당" />
+        <!-- today menu info-->
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FAFAFA"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="오렌지 식당"/>
+        <ImageView
+            android:id="@+id/food_img"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.4"
+            android:src="@drawable/fork" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#F3F3F3"
-                android:layout_marginTop="5dp"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
-                android:text="기타 메뉴"
-                android:textAlignment="center"
-                android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:text="돈까스"
+            android:textColor="@color/black" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FAFAFA"
-                android:paddingBottom="5dp"
-                android:paddingTop="5dp"
-                android:text="랜덤 메뉴 선택기" />
 
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <!--Line-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.01"
+        android:background="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.01"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.01"
+        android:background="@color/colorPrimary" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <!-- function button-->
+        <Button
+            android:id="@+id/shopselect_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/Big_text_size"
+            android:background="@color/colorAccent"
+            android:text="식 당 선 택"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.1"/>
+
+        <Button
+            android:id="@+id/eat_btn"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/Big_text_size"
+            android:background="@color/colorPrimaryDark"
+            android:text="뭐 먹 지 ?"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

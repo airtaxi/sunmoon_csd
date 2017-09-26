@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "531331284577",
+    "firebase_url": "https://whattoeat-d346a.firebaseio.com",
+    "project_id": "whattoeat-d346a",
+    "storage_bucket": "whattoeat-d346a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531331284577:android:3cd03c1302284d1a",
+        "android_client_info": {
+          "package_name": "kr.ac.sunmoon.whattoeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531331284577-v9l0uv94ca3t643ed1a8sf1rfeq3lcf3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.ac.sunmoon.whattoeat",
+            "certificate_hash": "f8e5d80e40e2ae054197eb47d80ba77bdaecf28a"
+          }
+        },
+        {
+          "client_id": "531331284577-p5m9kvl7lt5shsspm89n2esngdku3lb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiJ6IUV3YAMzme4jrgOMnVN0n_xScU3uw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531331284577-p5m9kvl7lt5shsspm89n2esngdku3lb1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

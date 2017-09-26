@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.2"/>
+
+    <!-- allergy filter-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@drawable/shape_list"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.2"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="알러지 필터"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:orientation="horizontal"
+            android:layout_weight="0.2">
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:text="난류"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:text="우유"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:text="메밀"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:text="땅콩"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:text="대두"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:text="밀"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:orientation="horizontal"
+            android:layout_weight="0.2">
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textSize="@dimen/small_text_size"
+                android:text="고등어"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:text="게"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:text="새우"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textSize="@dimen/small_text_size"
+                android:text="돼지고기"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textSize="@dimen/small_text_size"
+                android:text="복숭아"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textSize="@dimen/small_text_size"
+                android:text="토마토"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:orientation="horizontal"
+            android:layout_weight="0.2">
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textSize="@dimen/small_text_size"
+                android:text="아황산류"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:text="호두"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textSize="@dimen/small_text_size"
+                android:text="닭고기"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textSize="@dimen/small_text_size"
+                android:text="쇠고기"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textSize="@dimen/small_text_size"
+                android:text="오징어"/>
+
+            <CheckBox
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:textSize="@dimen/small_text_size"
+                android:text="조개류"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!-- shop filter-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.2"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@drawable/shape_list"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="0.2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="0.2"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="식당"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:orientation="horizontal"
+                android:layout_weight="0.8">
+
+                <CheckBox
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:text="기숙사"/>
+
+                <CheckBox
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:text="학생회관"/>
+
+                <CheckBox
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:text="오렌지"/>
+
+                <CheckBox
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:text="교직원"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="확 인"/>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

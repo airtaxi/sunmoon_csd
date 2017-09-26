@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="Big_text_size">30sp</dimen>
+    <dimen name="Middle_text_size">25sp</dimen>
+    <dimen name="default_text_size">15sp</dimen>
+    <dimen name="small_text_size">10sp</dimen>
+    <dimen name="bsmall_text_size">8sp</dimen>
+
+</resources>
