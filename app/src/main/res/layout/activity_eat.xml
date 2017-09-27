@@ -269,8 +269,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
-        app:cardBackgroundColor="#EAEAEA"
         android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#EAEAEA"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
         <TextView
