@@ -1,121 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+
+    <!--comment add section-->
 
     <LinearLayout
-        android:id="@+id/orenge_food"
+        android:id="@+id/comment_add"
         android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
         android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="4"
-            android:orientation="vertical"
-            android:background="@drawable/fork" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="0.25"
-            android:text="돈까스"/>
-
+            android:layout_height="1dp"
+            android:background="@color/black"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="0.1"/>
-
-        <!-- reple/like-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="0.25"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="댓글"/>
-
-            <TextView
-                android:id="@+id/reple_tv"
-                android:layout_width="0px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="0"/>
-
-            <TextView
-                android:layout_width="0px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="좋아요"/>
-
-            <TextView
-                android:id="@+id/like_tv"
-                android:layout_width="0px"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="0"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="0.1"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1"
-            android:text="댓글내용들..."/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1"
-            android:text="댓글내용들..."/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1"
-            android:text="댓글내용들..."/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
             <EditText
-                android:id="@+id/reple_edt"
-                android:layout_width="0px"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
-                android:textSize="@dimen/default_text_size"
-                android:hint="내용을 입력해주세요..."/>
-
+                android:layout_weight="1"/>
             <Button
-                android:id="@+id/reple_btn"
-                android:layout_width="0px"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:textColor="@color/black"
-                android:text="확 인"/>
-
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="전송"/>
         </LinearLayout>
+    </LinearLayout>
 
+    <!--main section-->
 
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/comment_add">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:paddingBottom="5dp"
+                        android:text="돈까스"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/black"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginBottom="15dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/fork"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <!-- reple/like-->
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentStart="true">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="댓글"/>
+
+                        <TextView
+                            android:id="@+id/tv_reply"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="0"/>
+
+                        <Space
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="좋아요"/>
+
+                        <TextView
+                            android:id="@+id/tv_like"
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                    <!--comment section layout (per comment) -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="7dp"
+                            android:background="#EEEEEE"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="5dp"
+                            android:text="이호원" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="공사장 타이어 씹는 맛 남" />
+                    </LinearLayout>
+                    <!--comment section layout (per comment) -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="7dp"
+                            android:background="#EEEEEE"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="5dp"
+                            android:text="이호원" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="이걸 먹느니 김수미 간장게장을 입으로 들이키겠음ㅋㅋㅋㅋㅋㅋㅋㅋ" />
+                    </LinearLayout>
+                    <!--comment section layout (per comment) -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="7dp"
+                            android:background="#EEEEEE"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="5dp"
+                            android:text="이호원" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="무한리필 고깃집에서 목살을 먹어도 이거보단 맛있음" />
+                    </LinearLayout>
+                    <!--comment section layout (per comment) -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="7dp"
+                            android:background="#EEEEEE"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="5dp"
+                            android:text="이호원" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="차라리 군대 짬밥이 더 맛있을듯" />
+                    </LinearLayout>
+                    <!--comment section layout (per comment) -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="7dp"
+                            android:background="#EEEEEE"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="5dp"
+                            android:text="이호원" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="이 메뉴 개발한사람은 이거 먹어보기는 한거냐" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
         </LinearLayout>
-
-
-
-</LinearLayout>
+    </ScrollView>
+</RelativeLayout>

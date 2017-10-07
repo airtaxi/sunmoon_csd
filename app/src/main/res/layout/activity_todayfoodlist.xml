@@ -58,6 +58,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="13dp"
                                 android:layout_marginStart="4dp"
+                                android:textStyle="bold"
                                 android:text="3"/>
                             <Space
                                 android:layout_width="7dp"
@@ -72,6 +73,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="13sp"
                                 android:layout_marginStart="4dp"
+                                android:textStyle="bold"
                                 android:text="3"/>
                         </LinearLayout>
 
@@ -132,6 +134,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="13dp"
                                 android:layout_marginStart="4dp"
+                                android:textStyle="bold"
                                 android:text="3"/>
                             <Space
                                 android:layout_width="7dp"
@@ -146,6 +149,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="13sp"
                                 android:layout_marginStart="4dp"
+                                android:textStyle="bold"
                                 android:text="3"/>
                         </LinearLayout>
 
@@ -206,6 +210,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="13dp"
                                 android:layout_marginStart="4dp"
+                                android:textStyle="bold"
                                 android:text="3"/>
                             <Space
                                 android:layout_width="7dp"
@@ -220,6 +225,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="13sp"
                                 android:layout_marginStart="4dp"
+                                android:textStyle="bold"
                                 android:text="3"/>
                         </LinearLayout>
 
@@ -280,6 +286,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="13dp"
                                 android:layout_marginStart="4dp"
+                                android:textStyle="bold"
                                 android:text="3"/>
                             <Space
                                 android:layout_width="7dp"
@@ -294,6 +301,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="13sp"
                                 android:layout_marginStart="4dp"
+                                android:textStyle="bold"
                                 android:text="3"/>
                         </LinearLayout>
 
