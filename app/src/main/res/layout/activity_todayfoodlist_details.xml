@@ -25,12 +25,27 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:hint="작성자"
+                android:singleLine="true"
+                android:maxLength="20"
+                android:layout_weight="2"/>
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/black"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="내용 (300자 이내)"
+                android:maxLength="300"
                 android:layout_weight="1"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3"
-                android:text="전송"/>
+                android:layout_weight="0.15"
+                android:text="작성"/>
         </LinearLayout>
     </LinearLayout>
 
