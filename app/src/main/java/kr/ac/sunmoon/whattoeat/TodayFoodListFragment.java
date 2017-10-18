@@ -8,6 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+
+import kr.ac.sunmoon.whattoeat.datatypes.RestMenu;
+
+import static kr.ac.sunmoon.whattoeat.MainActivity.mRestDatabase;
+
 public class TodayFoodListFragment extends Fragment {
 
 
@@ -37,26 +45,62 @@ public class TodayFoodListFragment extends Fragment {
 
         detailsFragment = new DetailsFragment();
 
-        final Bundle bundle = getArguments();
+        Bundle bundle = getArguments();
 
-        menu = view.findViewById(R.id.menu1);
-        menu.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public  void onClick(View view){
+        int shopIndex = bundle.getInt("shopIndex");
 
-                bundle.putString(Mn_MSG,Mn_Start);
-                detailsFragment.setArguments(bundle);
+        LinearLayout menuLayout = (LinearLayout) view.findViewById(R.id.menu_layout);
 
-                FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.content, detailsFragment, Mn_TAG);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+        FragmentTransaction fragmentTransaction = myFragmentManager.beginTransaction();
+        if(mRestDatabase.restaurants.get(shopIndex).menus != null) {
+            for (int index = 0; index < mRestDatabase.restaurants.get(shopIndex).menus.size(); index++) {
+                RestMenu restMenu = mRestDatabase.restaurants.get(shopIndex).menus.get(index);
+                int likeCnt = 0;
+                int commentCnt = 0;
+                if (restMenu.response != null) {
+                    HashMap<String, HashMap<String, Object>> comments = (HashMap<String, HashMap<String, Object>>) restMenu.response.get("comment");
+                    HashMap<String, String> likes = (HashMap<String, String>) restMenu.response.get("like");
+
+
+                    long epoachSeconds = System.currentTimeMillis();
+                    Date dateNow = new Date(epoachSeconds);
+
+                    SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd");
+                    String date = sdfDate.format(dateNow);
+
+                    if(likes != null) {
+                        for(String idx : likes.keySet()) {
+                            String like = likes.get(idx);
+                            if (like.equals(date)) {
+                                likeCnt++;
+                            }
+                        }
+                    }
+                    if(comments != null) {
+                        for(String idx : comments.keySet()) {
+                            HashMap<String, Object> comment = comments.get(idx);
+                            if (comment.get("date").equals(date)) {
+                                commentCnt++;
+                            }
+                        }
+                    }
+
+                }
+
+                ListMenuFragment menu = new ListMenuFragment();
+                Bundle bundleToPass = new Bundle();
+                bundleToPass.putString("img", restMenu.img);
+                bundleToPass.putString("name", restMenu.name);
+                bundleToPass.putInt("likes", likeCnt);
+                bundleToPass.putInt("comments", commentCnt);
+                bundleToPass.putInt("shopIndex", shopIndex);
+                bundleToPass.putInt("menuIndex", index);
+                menu.setArguments(bundleToPass);
+
+                fragmentTransaction.add(R.id.menu_layout, menu);
             }
-        });
-
-
-
-
+            fragmentTransaction.commit();
+        }
         return view;
     }
 
